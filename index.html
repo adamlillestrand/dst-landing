@@ -269,17 +269,22 @@
     .btn-primary {
       background: var(--gold);
       color: var(--navy);
+      font-weight: 600;
+      letter-spacing: 0.18em;
     }
     .btn-primary:hover { background: var(--gold-light); }
 
     .btn-secondary {
       background: transparent;
-      color: rgba(255,255,255,0.80);
-      border: 1px solid rgba(255,255,255,0.28);
+      color: rgba(255,255,255,0.65);
+      border: 1px solid rgba(255,255,255,0.2);
+      font-weight: 400;
+      font-size: 7.5px;
+      letter-spacing: 0.18em;
     }
     .btn-secondary:hover {
-      border-color: rgba(255,255,255,0.55);
-      color: var(--white);
+      border-color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.85);
     }
 
     .hero-legal {
@@ -507,7 +512,7 @@
     h2.ps-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-weight: 400;
-      font-size: clamp(22px, 3vw, 32px);
+      font-size: clamp(24px, 3.2vw, 34px);
       color: var(--text-00);
       line-height: 1.15;
       margin-bottom: 0.65rem;
@@ -1115,7 +1120,7 @@
     /* Intake columns */
     .intake-cols {
       display: grid;
-      grid-template-columns: 1.15fr 1fr;
+      grid-template-columns: 1.4fr 1fr;
       gap: 1px;
       background: rgba(196,162,101,0.15);
     }
@@ -1130,8 +1135,9 @@
     }
 
     .intake-col-secondary {
-      background: rgba(255,255,255,0.025);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.015);
+      border: 1px solid rgba(255,255,255,0.06);
+      opacity: 0.85;
     }
 
     .intake-col-label {
@@ -1544,6 +1550,7 @@
     <span class="nav-id"><strong>IRC §1031</strong> &nbsp;&middot;&nbsp; Delaware Statutory Trust</span>
     <div class="nav-links">
       <button class="nav-link" onclick="scrollToId('program-structure')">Program Structure</button>
+      <button class="nav-link" onclick="scrollToId('owner-context')">Owner Context</button>
       <button class="nav-link" onclick="scrollToId('diligence')">Due Diligence</button>
       <button class="nav-link" onclick="scrollToId('faq')">Common Questions</button>
       <button class="nav-cta" onclick="scrollToId('intake')">Request a Planning Discussion</button>
@@ -1559,7 +1566,7 @@
       <div class="hero-tag fade-up d1">Structural Reference Memorandum</div>
 
       <h1 class="hero-title fade-up d2">
-        IRC &sect;1031 &amp; the<br>Delaware Statutory Trust<em> — a structural reference for tax-deferred exchanges</em>
+        IRC &sect;1031 &amp; the<br>Delaware Statutory Trust<br><em style="font-size:0.72em;color:rgba(223,201,154,0.85);letter-spacing:0em;line-height:1.4;display:block;margin-top:0.2rem;">A structural reference for tax-deferred exchanges</em>
       </h1>
 
       <div class="hero-rule-inline fade-up d3"></div>
@@ -1568,9 +1575,12 @@
         Educational reference for property owners evaluating Delaware Statutory Trust structures within a &sect;1031 exchange.
       </p>
 
-      <p class="hero-descriptor-sub fade-up d3">
-        Most discussions focus on exchange timing, DST ownership structure, and replacement property planning.
-      </p>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;" class="fade-up d3">
+        <div style="width:24px;height:0.5px;background:rgba(255,255,255,0.2);"></div>
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.8;letter-spacing:0.08em;">
+          Commercial property owners &nbsp;·&nbsp; Refinance decisions &nbsp;·&nbsp; Debt maturity &nbsp;·&nbsp; Estate transitions &nbsp;·&nbsp; Passive replacement strategies
+        </p>
+      </div>
 
       <div class="hero-btns fade-up d4">
         <button class="btn btn-primary" onclick="scrollToId('intake')">Request a &sect;1031 Planning Discussion</button>
@@ -1671,7 +1681,48 @@
   </div><!-- /page-body -->
 
 
-  <!-- ═══ PROGRAM STRUCTURE ═══ -->
+  
+
+  <!-- ═══ WHEN OWNERS REACH OUT ═══ -->
+  <div id="owner-context" style="background:var(--navy);position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 90% 20%, rgba(184,149,78,0.06) 0%, transparent 50%);pointer-events:none;"></div>
+    <div style="max-width:860px;margin:0 auto;padding:4.5rem 3rem 5rem;position:relative;z-index:1;">
+
+      <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.75rem;">
+        <span style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:7px;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);white-space:nowrap;">When Owners Typically Reach Out</span>
+        <div style="flex:1;height:0.5px;background:rgba(255,255,255,0.1);"></div>
+      </div>
+
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(24px,3.2vw,34px);line-height:1.1;color:#fff;letter-spacing:-0.02em;margin-bottom:0.75rem;">
+        Most conversations begin before a decision has been made.
+      </h2>
+      <div style="width:32px;height:1.5px;background:linear-gradient(to right,var(--gold),transparent);margin-bottom:1.5rem;"></div>
+      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;font-style:italic;color:rgba(255,255,255,0.7);line-height:1.65;max-width:580px;margin-bottom:2.5rem;">
+        The owners who have the most options are the ones who start this conversation before the situation forces it.
+      </p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.07);">
+        <div style="background:rgba(255,255,255,0.03);padding:1.25rem 1.5rem;border-bottom:0.5px solid rgba(255,255,255,0.07);">
+          <div style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.55rem;">Debt and Capital</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:12.5px;font-weight:400;color:rgba(255,255,255,0.7);line-height:1.95;">Upcoming loan maturity or refinancing pressure<br>Interest-only period ending<br>Refinancing at materially higher rates<br>Large embedded capital gain exposure</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);padding:1.25rem 1.5rem;border-bottom:0.5px solid rgba(255,255,255,0.07);">
+          <div style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.55rem;">Ownership and Operations</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:12.5px;font-weight:400;color:rgba(255,255,255,0.7);line-height:1.95;">Increasing management or operational complexity<br>Desire to reduce active ownership responsibilities<br>Long-term hold — considering disposition timing<br>Recourse exposure on current loan</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);padding:1.25rem 1.5rem;">
+          <div style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.55rem;">Planning and Transition</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:12.5px;font-weight:400;color:rgba(255,255,255,0.7);line-height:1.95;">Estate or generational planning under review<br>Succession question without a clear answer<br>Sale proceeds expected within 3–12 months<br>Evaluating passive replacement property structures</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);padding:1.25rem 1.5rem;">
+          <div style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.55rem;">Post-Sale</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:12.5px;font-weight:400;color:rgba(255,255,255,0.7);line-height:1.95;">Property recently sold — identification window open<br>Replacement property not yet identified<br>Exchange structure under review with advisor<br>Prior §1031 exchange — evaluating next structure</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /owner-context -->
+<!-- ═══ PROGRAM STRUCTURE ═══ -->
   <div id="program-structure">
     <div class="ps-wrap">
 
@@ -1687,7 +1738,7 @@
         <div class="ps-card">
           <span class="ps-card-tag">Distribution Architecture</span>
           <h3 class="ps-card-title">Direct Sponsorship Structure</h3>
-          <p class="ps-card-body">Organized through a direct sponsorship structure. Investor engagement occurs under Regulation D, Rule 506(b).</p>
+          <p class="ps-card-body">Direct sponsor structure without an external broker-dealer distribution layer. Investor engagement occurs under Regulation D, Rule 506(b).</p>
         </div>
 
         <div class="ps-card">
@@ -1718,6 +1769,50 @@
     </div>
   </div><!-- /program-structure -->
 
+
+
+  <!-- ═══ REFINANCE VS REDEPLOYMENT ═══ -->
+  <div id="refi-context" style="background:var(--cream);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);">
+    <div style="max-width:860px;margin:0 auto;padding:4.5rem 3rem 5rem;">
+
+      <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;">
+        <span style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:7px;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold-deep);white-space:nowrap;">Refinance vs. Redeployment</span>
+        <div style="flex:1;height:0.5px;background:linear-gradient(to right,var(--border-faint),transparent);"></div>
+      </div>
+
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(24px,3.2vw,34px);line-height:1.1;color:var(--text-00);letter-spacing:-0.025em;margin-bottom:0.5rem;">
+        The comparison is not always hold versus sell.
+      </h2>
+      <div style="width:32px;height:1.5px;background:linear-gradient(to right,var(--gold),transparent);margin-bottom:1.75rem;"></div>
+
+      <div style="display:grid;grid-template-columns:1.2fr 0.9fr;gap:2.5rem;">
+        <div>
+          <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;font-weight:400;font-style:italic;color:var(--text-20);line-height:1.65;margin-bottom:1.25rem;">
+            In many cases the more relevant comparison is refinancing at current rates against redeploying equity through a tax-deferred replacement property structure. The analysis depends on the owner's specific basis, debt structure, and capital objectives — not on a general model.
+          </p>
+          <p style="font-family:'Montserrat',sans-serif;font-size:12.5px;font-weight:400;color:var(--text-40);line-height:1.85;margin-bottom:1.25rem;">
+            Most owners with long-hold assets have not had this comparison structured clearly with their CPA. The after-tax cash flow on a refi at current rates versus the after-tax cash flow if capital were redeployed without a large tax event is the comparison worth running before the refinancing decision is made — not after.
+          </p>
+        </div>
+        <div>
+          <div style="border-top:0.5px solid var(--border-faint);">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border-light);border:1px solid var(--border-light);margin-top:1.5rem;">
+              <div style="background:var(--off-white);padding:1rem;">
+                <div style="font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:0.5rem;">Refinance Path</div>
+                <div style="font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:400;color:var(--text-40);line-height:1.8;">New loan at current rates<br>Active ownership continues<br>Capital remains in place<br>Deferred gain accumulates<br>Personal recourse typically continues</div>
+              </div>
+              <div style="background:var(--warm);padding:1rem;">
+                <div style="font-family:'Montserrat',sans-serif;font-size:6.5px;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:0.5rem;">§1031 Exchange Path</div>
+                <div style="font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:400;color:var(--text-40);line-height:1.8;">Capital gain deferred<br>Replacement property acquired<br>Debt replaced at trust level<br>Passive or active structure<br>Estate interaction — CPA to model</div>
+              </div>
+            </div>
+            <p style="font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:400;color:var(--text-60);font-style:italic;line-height:1.75;margin-top:0.85rem;">This comparison is for structural reference only. No recommendation is made. Outcomes depend on taxpayer-specific facts and should be modeled by qualified tax and legal counsel.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /refi-context -->
 
   <!-- ═══ DUE DILIGENCE ═══ -->
   <div id="diligence">
@@ -1951,9 +2046,7 @@
 
       <div class="intake-eyebrow">Planning Discussion</div>
       <h2 class="intake-heading">Request a &sect;1031 Planning Discussion</h2>
-      <p class="intake-desc">Educational discussion focused on exchange timing, DST structure, and replacement property planning. No offering materials are provided through this request.</p>
-      <p class="intake-sub"><em>Most conversations begin with general questions around timing, DST structure, or replacement property planning.</em></p>
-
+      <p class="intake-desc">Educational discussion covering exchange timing, DST structure, and program organization. No offering materials provided.</p>
       <div class="intake-cols">
 
         <!-- PRIMARY: Planning Discussion -->
@@ -1984,12 +2077,13 @@
               <label class="df-label" for="sf-timeline">What best describes your current situation? <span class="df-opt">(optional)</span></label>
               <select class="df-input" id="sf-timeline">
                 <option value="">Select one</option>
-                <option>Exploring future &sect;1031 options</option>
-                <option>Property under contract</option>
-                <option>Recently sold property</option>
-                <option>Within identification period</option>
-                <option>General DST research</option>
-                <option>Advisor / CPA / attorney review</option>
+                <option>Pre-disposition planning</option>
+                <option>Refinancing pressure</option>
+                <option>Debt maturity</option>
+                <option>Management burden</option>
+                <option>Estate transition</option>
+                <option>Passive replacement interest</option>
+                <option>Post-sale exchange review</option>
               </select>
             </div>
             <div class="df-checks">
@@ -2004,14 +2098,14 @@
           <div class="df-confirm" id="schedule-confirm">
             <div class="df-confirm-icon"></div>
             <p>Request received.</p>
-            <p>We'll follow up directly within one business day to coordinate a time for your discussion. This is an educational conversation — no offering materials are provided through this request.</p>
+            <p>Our team will respond directly within one business day to coordinate next steps. This is an educational conversation — no offering materials are provided through this request.</p>
           </div>
         </div>
 
         <!-- SECONDARY: Reference Packet -->
         <div class="intake-col intake-col-secondary">
           <span class="intake-col-label">Request Reference Packet</span>
-          <div class="intake-col-heading">&sect;1031 Reference Packet</div>
+          <div class="intake-col-heading" style="font-size:16px;color:rgba(255,255,255,0.75);">&sect;1031 Reference Packet</div>
           <div id="packet-form">
             <div class="df-row">
               <div class="df">
@@ -2035,12 +2129,13 @@
               <label class="df-label" for="pf-context">What best describes your current situation? <span class="df-opt">(optional)</span></label>
               <select class="df-input" id="pf-context">
                 <option value="">Select one</option>
-                <option>Exploring future &sect;1031 options</option>
-                <option>Property under contract</option>
-                <option>Recently sold property</option>
-                <option>Within identification period</option>
-                <option>General DST research</option>
-                <option>Advisor / CPA / attorney review</option>
+                <option>Pre-disposition planning</option>
+                <option>Refinancing pressure</option>
+                <option>Debt maturity</option>
+                <option>Management burden</option>
+                <option>Estate transition</option>
+                <option>Passive replacement interest</option>
+                <option>Post-sale exchange review</option>
               </select>
             </div>
             <div class="df-checks">
@@ -2055,7 +2150,7 @@
           <div class="df-confirm" id="packet-confirm">
             <div class="df-confirm-icon"></div>
             <p>Request received.</p>
-            <p>We'll follow up directly within one business day with the §1031 Reference Packet.</p>
+            <p>Our team will respond directly within one business day with the §1031 Reference Packet.</p>
           </div>
         </div>
 
@@ -2075,7 +2170,7 @@
       <div class="footer-legal">
         <span class="footer-legal-lead">This material is intended for general educational and informational purposes regarding §1031 exchange structure and DST frameworks.</span>
         <span class="footer-sources">Authoritative sources: Rev. Rul. 2004-86 (IRS); IRS guidance on §1031 timelines and Qualified Intermediary role; SEC guidance on general solicitation and Regulation D.</span>
-        This website is provided solely for educational and informational purposes. Nothing contained herein constitutes an offer to sell or a solicitation of an offer to buy any security, nor does it constitute investment advice, legal advice, or tax advice. DST beneficial interests are securities and may only be offered and sold through properly licensed channels to accredited investors in accordance with applicable federal and state securities laws. Any offering of DST interests, if made, will be conducted only by means of a formal private placement memorandum and subscription documents. No offering will be made via this website or these materials, and no securities will be sold without completion of required investor verification consistent with Regulation D. All investments involve risk, including potential loss of principal. Past performance is not indicative of future results. Prospective investors should conduct independent due diligence and consult qualified legal, tax, and financial professionals prior to making any investment decision.
+        This website is provided for educational and informational purposes only. Nothing herein constitutes an offer to sell or solicitation to buy any security, nor investment, legal, or tax advice. DST interests are securities offered only through properly licensed channels to accredited investors in accordance with applicable securities laws. Any offering, if made, will be conducted only by means of a formal private placement memorandum following required investor verification consistent with Regulation D. Consult qualified legal, tax, and financial professionals prior to any investment decision.
       </div>
     </div>
   </footer>
